@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=1.0, user-scalable=no"
+    />
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="This is a blog where I can expressed most of my interests in the best way I could show them to the world!."
+    />
+    <meta
+      name="keywords"
+      content="Carlos Zabaka, Windows 95 portfolio, Blog, retro web design, web development projects, UX/UI design, JavaScript projects, front-end development, full-stack development"
+    />
+    <meta name="author" content="Carlos" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Carlos Zabala | Windows 95 style blog" />
+    <meta
+      property="og:description"
+      content="Step into nostalgia with Windows 95-themed portfolio, featuring cutting-edge React web projects and interactive retro designs."
+    />
+    <meta property="og:image" content="/src/assets/95icon.png" />
+    <meta property="og:url" content="https://charlyzabala.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Yute | Windows 95 React Developer Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Dive into Yute's retro-inspired portfolio built with React. Discover web development projects and nostalgic Windows 95 aesthetics."
+    />
+    <meta name="twitter:image" content="/src/assets/95icon.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/src/assets/95icon.png" />
+    <link rel="apple-touch-icon" href="/src/assets/95icon.png" />
+
+    <!-- Preloading and Resource Hints -->
+    <link rel="preload" href="/src/assets/95icon.png" as="image" />
+    <link rel="preload" href="/src/main.jsx" as="script" />
+
+    <!-- Title -->
+    <title>Carlos Zabala | Windows 95 style blog</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0D8FVG7HD"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-S0D8FVG7HD');
+    </script>
+    
+  </head>
+  <body>
+    <div id="root" role="main" aria-label="Carlos Zabala - Blog"></div>
+    <div id="winamp-container"></div>
+    <script type="module" src="/src/main.jsx" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (Webamp.browserIsSupported()) {
+          const webamp = new Webamp({
+            initialTracks: [
+              {
+                metaData: { title: "Song 1", artist: "Artist 1" },
+                url: "/src/assets/song1.mp3", // Update with the correct file name
+              },
+              {
+                metaData: { title: "Song 2", artist: "Artist 2" },
+                url: "/src/assets/song2.mp3",
+              },
+              {
+                metaData: { title: "Song 3", artist: "Artist 3" },
+                url: "/src/assets/song3.mp3", // Add new songs here
+              },
+              {
+                metaData: { title: "Song 4", artist: "Artist 4" },
+                url: "/src/assets/song4.mp3",
+              },
+              {
+                metaData: { title: "Song 5", artist: "Artist 5" },
+                url: "/src/assets/song5.mp3",
+              },
+              {
+                metaData: { title: "Song 6", artist: "Artist 6" },
+                url: "/src/assets/song6.mp3",
+              },
+              {
+                metaData: { title: "Song 7", artist: "Artist 7" },
+                url: "/src/assets/song7.mp3",
+              },
+
+            ],
+          });
+
+          webamp.renderWhenReady(document.getElementById("winamp-container"));
+        } else {
+          alert("Your browser does not support Webamp.");
+        }
+      });
+    </script>
+  </body>
+</html>
+

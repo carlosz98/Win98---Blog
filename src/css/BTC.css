@@ -1,0 +1,106 @@
+.btc_container {
+    display: flex;
+    position: absolute;
+    width: 275px;
+    height: 100px;
+    background: #f2f2f1a0;
+    right: 1rem;
+    top: 2rem;
+    padding: .5rem;
+    border-radius: 4px;
+    justify-content: space-around;
+    
+}
+
+.btc_container img {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    right: 2px;
+}
+
+.leftside_btc {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.leftside_btc p {
+    position: relative;
+    font-size: 14px;
+    top: 14px;
+    right: 1px;
+}
+
+.leftside_btc_btm {
+    position: absolute;
+    width: 70%;
+    margin-top: 5px;
+    left: 4rem;
+    line-height: 17px;
+}
+
+.leftside_btc_btm .gain_loss_percentage {
+    position: relative;
+    bottom: 8px;
+}
+
+.leftside_btc_btm p {
+    font-size: 11px;
+    color: #4a4949;
+}
+.leftside_btc_btm span {
+    font-size: 11px;
+    color: #4a4949;
+    margin-right: .6rem;
+}
+
+.rightside_btc {
+    width: 130px;
+}
+
+.rightside_btc h2 {
+    position: relative;
+    top: 12px;
+    letter-spacing: .06rem;
+    font-size: 16px;
+    color: #db2222 #0ac20a;
+}
+
+
+.rightside_btc span {
+    position: relative;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    left: 2px;
+}
+
+
+.refresher {
+    position: absolute;
+    font-size: 14px;
+    right: 6px;
+    top: 6px;
+    color: #393434;
+    cursor: pointer;
+}
+
+.refresher:hover {
+    color: #000000;
+}
+
+.refresher.active{
+    animation: refresh 1s ease-in-out;
+}
+
+@keyframes refresh {
+    0% {
+        color: #000000;
+        transform: rotate(0deg);
+    }
+    100%{
+        color: #000000;
+        transform: rotate(360deg);
+    }
+}
