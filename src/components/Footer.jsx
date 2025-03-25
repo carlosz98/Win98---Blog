@@ -19,6 +19,7 @@ import { BsFillCaretRightFill } from "react-icons/bs";
 import binEmp from '../assets/bin2.png'
 import bin from '../assets/bin.png'
 import news from '../assets/news.png'
+import blogIcon from '../assets/blogIcon.png'
 
 
 export default function Footer() {
@@ -135,6 +136,23 @@ export default function Footer() {
             imgAlt: "linked",
             style: { borderRadius: '5px' },
             spanText: "Linked",
+            onClick: () => {
+                window.open('https://www.linkedin.com/in/carloszabala98/', '_blank');
+            },
+            onmouseenter: () => {
+                setResumejectStartBar(false);
+                setProjectStartBar(false);
+            },
+        },
+        {
+            className: "blog",
+            imgSrc: blogIcon, // Replace with the path to your blog icon image
+            imgAlt: "blog",
+            style: { borderRadius: '5px' },
+            spanText: "Blog",
+            onClick: () => {
+                window.open('/blog', '_blank'); // Replace '/blog' with the actual blog URL or route
+            },
             onmouseenter: () => {
                 setResumejectStartBar(false);
                 setProjectStartBar(false);

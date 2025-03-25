@@ -35,7 +35,7 @@ import { StyleHide, imageMapping,
   iconContainerSize, iconImgSize, iconTextSize,
   handleDoubleClickPhotoOpen,
  } from './components/function/AppFunctions';
-
+import startupSound from './assets/startup.mp3';
 
 function App() {
   const [runCatVideo, setRunCatVideo] = useState(false)
@@ -480,6 +480,14 @@ const handleOnDrag = (name, ref) => () => {
 
     
     // utility
+    function playStartupSound() {
+      const audio = new Audio(startupSound);
+      audio.play();
+  }
+  useEffect(() => {
+    playStartupSound();
+}, []);
+
     if (
       iconRect.left < UtilityRect.right - offset &&
       iconRect.right > UtilityRect.left + offset &&

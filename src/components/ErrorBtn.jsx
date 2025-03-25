@@ -12,7 +12,7 @@ function ErrorBtn({themeDragBar, stateVal, text, setStateVal, runOpenFuction}) {
 
     } = useContext(UseContext);
     const textResetStroage = "Warning: Resetting local storage will erase all your info. Are you sure you want to continue?"
-    const textGithub = "Warning: You will be redirecting to another site, are you sure you want to continue?"
+    const textGithub = "Reminder: You are leaving this page to visit my website or Github."
     const textCat = "Warning: Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai Oiiai !"
 
 
@@ -56,11 +56,11 @@ function ErrorBtn({themeDragBar, stateVal, text, setStateVal, runOpenFuction}) {
                 return removeLocalStorage();
 
             case "github": 
-                return window.open('https://github.com/Yuteoctober/wins95Portfolio/', '_blank');
+                return window.open('https://github.com/carlosz98?tab=repositories', '_blank');
 
             case "webresume": 
                 
-            return window.open('https://yuteoctober.github.io/resume_web/', '_blank');
+            return window.open('https://charlyzabala.com/', '_blank');
             
             case "cat": 
                 setRunCatVideo(true)
